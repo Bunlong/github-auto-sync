@@ -1,11 +1,29 @@
 {
   "name": "github-auto-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rotom": "env-cmd ./.env node scripts/rotom.js",
+    "run-all": "env-cmd ./.env node scripts/runAll.js",
+    "watch": "env-cmd ./.env node scripts/watch.js"
   },
-  "author": "",
-  "license": "MIT"
+  "author": "Bunlong",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^16.15.0",
+    "bluebird": "^3.5.3",
+    "commander": "^2.19.0",
+    "cron": "^1.6.0",
+    "env-cmd": "^6.0.0",
+    "log4js": "^4.0.2",
+    "shelljs": "^0.7.8"
+  },
+  "engines": {
+    "node.js": "11.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunlong/github-auto-sync.git"
+  }
 }
